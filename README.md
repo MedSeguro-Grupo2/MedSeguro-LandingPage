@@ -16,6 +16,7 @@ MedSeguro es una plataforma digital orientada a la verificación de medicamentos
 ## Segmentos Objetivo
 - **Pacientes y consumidores:** Personas que adquieren medicamentos y desean verificar su autenticidad antes de consumirlos.
 - **Cuidadores y familiares:** Personas responsables de la salud de terceros que buscan garantizar la seguridad de los medicamentos que administran.
+- **Cuidadores y familiares:** Profesionales de salud que necesitan verificar información oficial de medicamentos para orientar correctamente a los pacientes.
 
 ## Características Principales
 - Verificación de medicamentos mediante escaneo de código de barras o QR
