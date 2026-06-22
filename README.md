@@ -32,6 +32,12 @@ MedSeguro es una plataforma digital orientada a la verificación de medicamentos
 - Recordatorios de medicamentos
 - Información detallada de farmacias (horarios, servicios, calificaciones)
 
+## Beneficios
+- Mayor seguridad para los usuarios.
+- Acceso rápido a información oficial.
+- Reducción del riesgo de consumir medicamentos falsificados.
+- Facilidad para encontrar farmacias autorizadas.
+
 ## Tecnologías Utilizadas
 - HTML5
 - CSS3
