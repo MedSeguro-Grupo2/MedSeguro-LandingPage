@@ -3,6 +3,12 @@
 ## Descripción del Proyecto
 MedSeguro es una plataforma digital orientada a la verificación de medicamentos y localización de farmacias autorizadas en el Perú. Permite a los usuarios comprobar la autenticidad de sus medicamentos mediante escaneo de código de barras o QR, consultar alertas sanitarias emitidas por DIGEMID y encontrar farmacias cercanas confiables.
 
+## Objetivos
+- Facilitar la verificación de medicamentos.
+- Brindar información oficial actualizada.
+- Mejorar la seguridad del paciente.
+- Promover el consumo responsable de medicamentos.
+
 ## Autores
 | Nombre | Código |
 |---|---|
