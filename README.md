@@ -10,7 +10,7 @@ MedSeguro es una plataforma digital orientada a la verificación de medicamentos
 | Balboa Gil, Braulio Cesar | U202423698 |
 | Garcia Caballero, Josselyn Zulay | U20241F770 |
 | Orellana Condori, Jordan Anthony | U202423929 |
-| Orihuela Aquino, Henry | U202421229 |
+| Orihuela Aquino, Henry | U202421229 |[](url)
 | Ortiz Tinta, Adrian Rodolfo | U20241G434 |
 
 ## Segmentos Objetivo
