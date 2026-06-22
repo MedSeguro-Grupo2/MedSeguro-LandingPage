@@ -60,3 +60,9 @@ MedSeguro-LandingPage
 ├── assets/
 └── README.md
 
+## Mejoras futuras
+
+- Autenticación de usuarios.
+- Notificaciones push.
+- Integración con las API oficiales.
+- Sincronización en la nube.
