@@ -38,3 +38,13 @@ La Landing Page está disponible en: https://medseguro-grupo2.github.io/MedSegur
 1ASI0385 - IHC y Tecnologías Móviles  
 Universidad Peruana de Ciencias Aplicadas (UPC)  
 Ciclo 2026-10
+
+## Estructura del Proyecto
+MedSeguro-LandingPage
+│
+├── index.html
+├── styles.css
+├── script.js
+├── assets/
+└── README.md
+
