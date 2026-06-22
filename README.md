@@ -3,6 +3,12 @@
 ## Descripción del Proyecto
 MedSeguro es una plataforma digital orientada a la verificación de medicamentos y localización de farmacias autorizadas en el Perú. Permite a los usuarios comprobar la autenticidad de sus medicamentos mediante escaneo de código de barras o QR, consultar alertas sanitarias emitidas por DIGEMID y encontrar farmacias cercanas confiables.
 
+## Objetivos
+- Facilitar la verificación de medicamentos.
+- Brindar información oficial actualizada.
+- Mejorar la seguridad del paciente.
+- Promover el consumo responsable de medicamentos.
+
 ## Autores
 | Nombre | Código |
 |---|---|
@@ -10,7 +16,7 @@ MedSeguro es una plataforma digital orientada a la verificación de medicamentos
 | Balboa Gil, Braulio Cesar | U202423698 |
 | Garcia Caballero, Josselyn Zulay | U20241F770 |
 | Orellana Condori, Jordan Anthony | U202423929 |
-| Orihuela Aquino, Henry | U202421229 |
+| Orihuela Aquino, Henry | U202421229 |[](url)
 | Ortiz Tinta, Adrian Rodolfo | U20241G434 |
 
 ## Segmentos Objetivo
@@ -26,6 +32,12 @@ MedSeguro es una plataforma digital orientada a la verificación de medicamentos
 - Recordatorios de medicamentos
 - Información detallada de farmacias (horarios, servicios, calificaciones)
 
+## Beneficios
+- Mayor seguridad para los usuarios.
+- Acceso rápido a información oficial.
+- Reducción del riesgo de consumir medicamentos falsificados.
+- Facilidad para encontrar farmacias autorizadas.
+
 ## Tecnologías Utilizadas
 - HTML5
 - CSS3
@@ -38,3 +50,13 @@ La Landing Page está disponible en: https://medseguro-grupo2.github.io/MedSegur
 1ASI0385 - IHC y Tecnologías Móviles  
 Universidad Peruana de Ciencias Aplicadas (UPC)  
 Ciclo 2026-10
+
+## Estructura del Proyecto
+MedSeguro-LandingPage
+│
+├── index.html
+├── styles.css
+├── script.js
+├── assets/
+└── README.md
+
