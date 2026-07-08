@@ -159,8 +159,8 @@
         <h2>Descarga MedSeguro y verifica donde estés</h2>
         <p>Lleva la seguridad en tu bolsillo. Verifica medicamentos, recibe alertas y consulta tu historial en cualquier momento</p>
         <div class="descarga-btns">
-          <button class="btn-store">App Store</button>
-          <button class="btn-store">Google Play</button>
+          <button class="btn-store">🍎 App Store</button>
+          <button class="btn-store">▶ Google Play</button>
         </div>
       </div>
       <div class="descarga-phone">
@@ -294,8 +294,72 @@
       <div class="farmacias-mapa" id="farmaciasMapa">
         <div class="mapa-placeholder" id="mapaPlaceholder">
           <div class="mapa-inner">
-            <div class="mapa-grid"></div>
-            <div class="mapa-streets"></div>
+            <svg class="mapa-illustration" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <style>
+                  .street-casing { stroke: #ddd8c8; fill: none; }
+                  .street-fill { stroke: #faf8f2; fill: none; }
+                </style>
+              </defs>
+
+              <!-- Fondo tierra, estilo Google Maps -->
+              <rect width="1000" height="700" fill="#f2efe6"/>
+
+              <!-- Zonas verdes (parques / áreas naturales, bloques no orgánicos) -->
+              <path d="M 700 0 L 1000 0 L 1000 260 C 900 300, 830 250, 790 300 C 740 360, 760 200, 700 180 Z" fill="#c3dba6"/>
+              <path d="M 60 500 L 260 480 C 300 540, 260 620, 200 640 L 40 660 Z" fill="#c3dba6"/>
+              <rect x="120" y="40" width="140" height="90" rx="6" fill="#c3dba6"/>
+
+              <!-- Calles secundarias verticales (casing + relleno) -->
+              <g>
+                <path class="street-casing" d="M 90 0 L 90 700" stroke-width="9"/>
+                <path class="street-fill" d="M 90 0 L 90 700" stroke-width="5"/>
+                <path class="street-casing" d="M 230 0 L 235 700" stroke-width="9"/>
+                <path class="street-fill" d="M 230 0 L 235 700" stroke-width="5"/>
+                <path class="street-casing" d="M 400 0 L 400 700" stroke-width="10"/>
+                <path class="street-fill" d="M 400 0 L 400 700" stroke-width="6"/>
+                <path class="street-casing" d="M 560 0 L 555 700" stroke-width="9"/>
+                <path class="street-fill" d="M 560 0 L 555 700" stroke-width="5"/>
+                <path class="street-casing" d="M 710 0 L 715 700" stroke-width="9"/>
+                <path class="street-fill" d="M 710 0 L 715 700" stroke-width="5"/>
+                <path class="street-casing" d="M 860 0 L 860 700" stroke-width="9"/>
+                <path class="street-fill" d="M 860 0 L 860 700" stroke-width="5"/>
+              </g>
+
+              <!-- Calles secundarias horizontales -->
+              <g>
+                <path class="street-casing" d="M 0 90 L 1000 88" stroke-width="9"/>
+                <path class="street-fill" d="M 0 90 L 1000 88" stroke-width="5"/>
+                <path class="street-casing" d="M 0 210 L 1000 214" stroke-width="9"/>
+                <path class="street-fill" d="M 0 210 L 1000 214" stroke-width="5"/>
+                <path class="street-casing" d="M 0 340 L 1000 336" stroke-width="10"/>
+                <path class="street-fill" d="M 0 340 L 1000 336" stroke-width="6"/>
+                <path class="street-casing" d="M 0 470 L 1000 474" stroke-width="9"/>
+                <path class="street-fill" d="M 0 470 L 1000 474" stroke-width="5"/>
+                <path class="street-casing" d="M 0 590 L 1000 586" stroke-width="9"/>
+                <path class="street-fill" d="M 0 590 L 1000 586" stroke-width="5"/>
+              </g>
+
+              <!-- Manzanas (edificios sutiles dentro de los bloques) -->
+              <g fill="#e4e0d3">
+                <rect x="130" y="120" width="70" height="60" rx="4"/>
+                <rect x="260" y="240" width="100" height="70" rx="4"/>
+                <rect x="440" y="130" width="80" height="50" rx="4"/>
+                <rect x="600" y="380" width="70" height="60" rx="4"/>
+                <rect x="900" y="120" width="70" height="70" rx="4"/>
+                <rect x="750" y="500" width="80" height="60" rx="4"/>
+                <rect x="130" y="380" width="60" height="60" rx="4"/>
+                <rect x="600" y="240" width="70" height="60" rx="4"/>
+              </g>
+
+              <!-- Edificio central (donde cae el pin activo) -->
+              <rect x="405" y="400" width="100" height="120" rx="6" fill="#d7d2c2"/>
+              <rect x="418" y="418" width="20" height="20" rx="2" fill="#f2efe6"/>
+              <rect x="452" y="418" width="20" height="20" rx="2" fill="#f2efe6"/>
+              <rect x="418" y="452" width="20" height="20" rx="2" fill="#f2efe6"/>
+              <rect x="452" y="452" width="20" height="20" rx="2" fill="#f2efe6"/>
+
+            </svg>
             <!-- Pines en el mapa simulado -->
             <div class="mapa-pin" style="top:30%;left:25%" data-id="1" onclick="seleccionarFarmaciaDesdePin(1)">
               <div class="pin-dot"></div><div class="pin-label">InkaFarma</div>
@@ -318,6 +382,7 @@
             <!-- Mi ubicación -->
             <div class="mapa-mi-ubicacion" style="top:48%;left:48%">
               <div class="mi-ubicacion-dot"></div>
+              <div class="mi-ubicacion-halo"></div>
               <div class="mi-ubicacion-ring"></div>
             </div>
           </div>
