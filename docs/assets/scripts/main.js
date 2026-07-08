@@ -36,6 +36,7 @@ const farmaciasData = [
     rating: 4.6,
     opiniones: 128,
     emoji: "🏪",
+    logo: "assets/images/inkafarma.png",
     color: "#00a651",
     servicios: [
       { icon: "💊", label: "Venta de medicamentos" },
@@ -58,6 +59,7 @@ const farmaciasData = [
     rating: 4.3,
     opiniones: 94,
     emoji: "🏬",
+    logo: "assets/images/mifarma.png",
     color: "#e63946",
     servicios: [
       { icon: "💊", label: "Venta de medicamentos" },
@@ -78,6 +80,7 @@ const farmaciasData = [
     rating: 4.1,
     opiniones: 42,
     emoji: "🏥",
+    logo: "assets/images/torres.jpg",
     color: "#457b9d",
     servicios: [
       { icon: "💊", label: "Venta de medicamentos" },
@@ -96,6 +99,7 @@ const farmaciasData = [
     rating: 4.4,
     opiniones: 67,
     emoji: "🏪",
+    logo: "assets/images/universal.png",
     color: "#2d6a4f",
     servicios: [
       { icon: "💊", label: "Venta de medicamentos" },
@@ -116,6 +120,7 @@ const farmaciasData = [
     rating: 3.9,
     opiniones: 28,
     emoji: "💊",
+    logo: "assets/images/sanJuan.jpg",
     color: "#6d6875",
     servicios: [
       { icon: "💊", label: "Venta de medicamentos" },
@@ -133,6 +138,7 @@ const farmaciasData = [
     rating: 4.2,
     opiniones: 53,
     emoji: "🏥",
+    logo: "assets/images/saludTotal.jpg",
     color: "#1b4332",
     servicios: [
       { icon: "💊", label: "Venta de medicamentos" },
@@ -451,7 +457,7 @@ function renderFarmacias(data) {
 
   lista.innerHTML = farmacias.map(f => `
     <div class="farmacia-card" id="card-f${f.id}" onclick="seleccionarFarmacia(${f.id})">
-      <div class="farmacia-thumb">${f.emoji}</div>
+      <div class="farmacia-thumb"><img src="${f.logo}" alt="${f.nombre}"></div>
       <div class="farmacia-info">
         <div class="farmacia-nombre">${f.nombre}</div>
         <div class="farmacia-dir">📍 ${f.direccion}</div>
@@ -600,7 +606,7 @@ function verDetalleFarmacia(id) {
   if (!f) return;
 
   document.getElementById('detalleContent').innerHTML = `
-    <div class="detalle-foto" style="font-size:4rem;text-align:center">${f.emoji}</div>
+    <div class="detalle-foto" style="text-align:center"><img src="${f.logo}" alt="${f.nombre}" style="width:80px;height:80px;object-fit:contain;border-radius:12px"></div>
     <div class="detalle-header">
       <div class="detalle-header-info">
         <div class="detalle-nombre">${f.nombre}</div>
