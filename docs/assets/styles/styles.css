@@ -393,66 +393,74 @@ a { text-decoration: none; }
 .btn-card-outline:hover { border-color: var(--green); color: var(--green); }
 
 /* Mapa */
-.farmacias-mapa { position: relative; overflow: hidden; background: #e8ead6; }
+.farmacias-mapa { position: relative; overflow: hidden; background: #f2efe6; }
 .mapa-placeholder { width: 100%; height: 100%; min-height: 600px; position: relative; }
 .mapa-inner { width: 100%; height: 100%; position: relative; overflow: hidden; }
 
-/* Mapa simulado con grid y calles */
-.mapa-grid {
+/* Mapa ilustrado estilo flat-design */
+.mapa-illustration {
   position: absolute; inset: 0;
-  background-color: #e8ead6;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px),
-    linear-gradient(rgba(200,210,190,0.4) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(200,210,190,0.4) 1px, transparent 1px);
-  background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
-}
-.mapa-streets {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.9) 0, rgba(255,255,255,0.9) 100%),
-    linear-gradient(90deg, rgba(255,255,255,0.9) 0, rgba(255,255,255,0.9) 100%);
-  background-size: 80px 12px, 12px 80px;
-  background-position: 0 34px, 34px 0;
-  background-repeat: repeat;
-  opacity: 0.6;
+  width: 100%; height: 100%;
+  display: block;
 }
 
-/* Pines del mapa */
+/* Pines del mapa - marcador tipo "gota" moderno */
 .mapa-pin {
   position: absolute; transform: translate(-50%, -100%);
   cursor: pointer; z-index: 5; text-align: center;
 }
 .pin-dot {
-  width: 14px; height: 14px; background: var(--green);
-  border: 3px solid white; border-radius: 50%;
-  margin: 0 auto;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
+  width: 30px; height: 30px; margin: 0 auto 2px;
+  background: linear-gradient(135deg, var(--green) 50%, var(--green-dark) 50%);
+  border: 3px solid white;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.28);
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.mapa-pin:hover .pin-dot { transform: scale(1.3); }
-.mapa-pin.active .pin-dot { background: var(--red); transform: scale(1.4); }
+.pin-dot::after {
+  content: '';
+  position: absolute; top: 50%; left: 50%;
+  width: 10px; height: 10px; background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.mapa-pin:hover .pin-dot { transform: rotate(-45deg) scale(1.15); box-shadow: 0 6px 14px rgba(0,0,0,0.35); }
+.mapa-pin.active .pin-dot {
+  background: linear-gradient(135deg, var(--red) 50%, #b91c1c 50%);
+  transform: rotate(-45deg) scale(1.3);
+  box-shadow: 0 6px 16px rgba(220,38,38,0.4);
+}
+.mapa-pin.active:hover .pin-dot { transform: rotate(-45deg) scale(1.35); }
 .pin-label {
   background: white; border: 1px solid var(--gray-mid);
-  border-radius: 6px; padding: 3px 8px;
-  font-size: 0.68rem; font-weight: 700; white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12); margin-bottom: 4px;
+  border-radius: 8px; padding: 4px 10px;
+  font-size: 0.7rem; font-weight: 700; white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-bottom: 6px;
   opacity: 0; transform: translateY(4px); transition: 0.2s;
+  pointer-events: none;
 }
 .mapa-pin:hover .pin-label, .mapa-pin.active .pin-label { opacity: 1; transform: translateY(0); }
+.mapa-pin.active .pin-label { color: var(--red); border-color: var(--red); }
 
 /* Mi ubicación */
 .mapa-mi-ubicacion { position: absolute; transform: translate(-50%,-50%); z-index: 6; }
 .mi-ubicacion-dot {
-  width: 14px; height: 14px; background: #1976d2;
-  border: 3px solid white; border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  width: 22px; height: 22px; background: #1976d2;
+  border: 4px solid white; border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.35);
   position: relative; z-index: 2;
+}
+.mi-ubicacion-halo {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 54px; height: 54px; border-radius: 50%;
+  background: rgba(25,118,210,0.18);
+  z-index: 1;
 }
 .mi-ubicacion-ring {
   position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-  width: 40px; height: 40px; border-radius: 50%;
+  width: 54px; height: 54px; border-radius: 50%;
   background: rgba(25,118,210,0.15);
   border: 1px solid rgba(25,118,210,0.3);
   animation: ping 2s ease-out infinite;
@@ -518,7 +526,6 @@ a { text-decoration: none; }
 .filtro-select:focus { border-color: var(--green); }
 
 /* Price range */
-.price-range {}
 .price-labels { display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--gray-text); margin-bottom: 4px; }
 .price-values { display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 700; margin-bottom: 10px; }
 .range-track { position: relative; height: 6px; background: var(--gray-mid); border-radius: 3px; margin-bottom: 8px; }
